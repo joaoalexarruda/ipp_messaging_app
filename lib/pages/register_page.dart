@@ -5,7 +5,8 @@ import "package:ipp_messaging_app/components/my_textfield.dart";
 import "package:ipp_messaging_app/components/square_tile.dart";
 
 class RegisterPage extends StatelessWidget {
-  // email and password controllers
+  // name, email and password controllers
+  final TextEditingController _nameController = TextEditingController();
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
   final TextEditingController _confirmPasswordController =
@@ -15,13 +16,21 @@ class RegisterPage extends StatelessWidget {
 
   RegisterPage({super.key, required this.togglePage});
 
+  final RegExp emailRegExp = RegExp(
+    r"^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,253}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,253}[a-zA-Z0-9])?)*$",
+  );
+
   // register method
   void register(BuildContext context) {
     // register
     final auth = AuthService();
 
     // if passwords match
-    if (_passwordController.text == _confirmPasswordController.text) {
+    if (_passwordController.text == _confirmPasswordController.text &&
+        _emailController.text.isNotEmpty &&
+        emailRegExp.hasMatch(_emailController.text) &&
+        _passwordController.text.isNotEmpty &&
+        _nameController.text.isNotEmpty) {
       try {
         auth.signUpWithEmailPassword(
           _emailController.text,
@@ -31,7 +40,15 @@ class RegisterPage extends StatelessWidget {
         showDialog(
           context: context,
           builder: (context) => AlertDialog(
-            title: Text(e.toString()),
+            backgroundColor: Theme.of(context).colorScheme.secondary,
+            title: Center(
+              child: Text(
+                e.toString(),
+                style: TextStyle(
+                    color: Theme.of(context).colorScheme.primary,
+                    fontWeight: FontWeight.bold),
+              ),
+            ),
           ),
         );
       }
@@ -41,8 +58,16 @@ class RegisterPage extends StatelessWidget {
     else {
       showDialog(
         context: context,
-        builder: (context) => const AlertDialog(
-          title: Text("Passwords do not match!"),
+        builder: (context) => AlertDialog(
+          backgroundColor: Theme.of(context).colorScheme.secondary,
+          title: Center(
+            child: Text(
+              "Passwords do not match or fields are empty.",
+              style: TextStyle(
+                  color: Theme.of(context).colorScheme.primary,
+                  fontWeight: FontWeight.bold),
+            ),
+          ),
         ),
       );
     }
@@ -93,6 +118,16 @@ class RegisterPage extends StatelessWidget {
 
                 const SizedBox(
                   height: 25,
+                ),
+
+                // email field
+                MyTextField(
+                  hintText: 'Name',
+                  controller: _nameController,
+                ),
+
+                const SizedBox(
+                  height: 10,
                 ),
 
                 // email field
