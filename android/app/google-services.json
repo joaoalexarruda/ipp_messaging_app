@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "675875379599",
+    "project_id": "ipp-messaging-app",
+    "storage_bucket": "ipp-messaging-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:675875379599:android:ebfc2feff9d34f5c5f93fa",
+        "android_client_info": {
+          "package_name": "com.example.ipp_messaging_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB3TI07m_uMrTL1lCChYpYpCJHDjMUa6kQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
