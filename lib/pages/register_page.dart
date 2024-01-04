@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import "package:ipp_messaging_app/auth/auth_service.dart";
 import "package:ipp_messaging_app/components/my_button.dart";
 import "package:ipp_messaging_app/components/my_textfield.dart";
+import "package:ipp_messaging_app/components/square_tile.dart";
 
 class RegisterPage extends StatelessWidget {
   // email and password controllers
@@ -51,115 +52,173 @@ class RegisterPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.background,
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            // IPP Logo and messaging icon
-            Row(
+      body: SafeArea(
+        child: Center(
+          child: SingleChildScrollView(
+            child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const Image(
-                  image: AssetImage("assets/images/ipp_logo.png"),
-                  height: 50,
+                // IPP Logo and messaging icon
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    const Image(
+                      image: AssetImage("assets/images/ipp_logo.png"),
+                      height: 50,
+                    ),
+                    const SizedBox(
+                      width: 10,
+                    ),
+                    Icon(Icons.message,
+                        size: 50, color: Theme.of(context).colorScheme.primary),
+                  ],
                 ),
+
                 const SizedBox(
-                  width: 10,
+                  height: 25,
                 ),
-                Icon(Icons.message,
-                    size: 50, color: Theme.of(context).colorScheme.primary),
-              ],
-            ),
 
-            const SizedBox(
-              height: 5,
-            ),
-
-            // some welcome text
-            Text(
-              "Sign up now! Your IPP friends are waiting.",
-              style: TextStyle(
-                fontSize: 14,
-                fontWeight: FontWeight.bold,
-                color: Theme.of(context)
-                    .colorScheme
-                    .inversePrimary
-                    .withOpacity(0.5),
-              ),
-            ),
-
-            const SizedBox(
-              height: 25,
-            ),
-
-            // email field
-            MyTextField(
-              hintText: 'Email',
-              controller: _emailController,
-            ),
-
-            const SizedBox(
-              height: 10,
-            ),
-
-            // password field
-            MyTextField(
-              hintText: 'Password',
-              controller: _passwordController,
-            ),
-
-            const SizedBox(
-              height: 10,
-            ),
-
-            // confirm password field
-            MyTextField(
-              hintText: 'Confirm password',
-              controller: _confirmPasswordController,
-            ),
-
-            const SizedBox(
-              height: 10,
-            ),
-
-            // login button
-            MyButton(
-              text: 'Register',
-              onTap: () => register(context),
-            ),
-
-            const SizedBox(
-              height: 10,
-            ),
-
-            // register now
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
+                // some welcome text
                 Text(
-                  "Already have an account? ",
+                  "Sign up now! Your IPP friends are waiting.",
                   style: TextStyle(
                     fontSize: 14,
+                    fontWeight: FontWeight.bold,
                     color: Theme.of(context)
                         .colorScheme
                         .inversePrimary
                         .withOpacity(0.5),
                   ),
                 ),
-                GestureDetector(
-                  onTap: togglePage,
-                  child: Text(
-                    "Login now!",
-                    style: TextStyle(
-                      fontSize: 14,
-                      color: Theme.of(context).colorScheme.primary,
-                      fontWeight: FontWeight.bold,
-                    ),
+
+                const SizedBox(
+                  height: 25,
+                ),
+
+                // email field
+                MyTextField(
+                  hintText: 'Email',
+                  controller: _emailController,
+                ),
+
+                const SizedBox(
+                  height: 10,
+                ),
+
+                // password field
+                MyTextField(
+                  hintText: 'Password',
+                  controller: _passwordController,
+                ),
+
+                const SizedBox(
+                  height: 10,
+                ),
+
+                // confirm password field
+                MyTextField(
+                  hintText: 'Confirm password',
+                  controller: _confirmPasswordController,
+                ),
+
+                const SizedBox(
+                  height: 10,
+                ),
+
+                // login button
+                MyButton(
+                  text: 'Register',
+                  onTap: () => register(context),
+                ),
+
+                const SizedBox(
+                  height: 10,
+                ),
+
+                // Or continue with
+                Padding(
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 25,
                   ),
+                  child: Row(
+                    children: [
+                      Expanded(
+                        child: Divider(
+                          thickness: 0.5,
+                          color: Theme.of(context)
+                              .colorScheme
+                              .inversePrimary
+                              .withOpacity(0.5),
+                        ),
+                      ),
+                      Text('  or continue with  ',
+                          style: TextStyle(
+                            fontSize: 12,
+                            color: Theme.of(context)
+                                .colorScheme
+                                .inversePrimary
+                                .withOpacity(0.5),
+                          )),
+                      Expanded(
+                        child: Divider(
+                          thickness: 0.5,
+                          color: Theme.of(context)
+                              .colorScheme
+                              .inversePrimary
+                              .withOpacity(0.5),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+
+                const SizedBox(
+                  height: 10,
+                ),
+
+                // google button
+
+                SizedBox(
+                  child: SquareTile(
+                    onTap: () {},
+                    imagePath: 'assets/images/google_logo.png',
+                  ),
+                ),
+
+                const SizedBox(
+                  height: 10,
+                ),
+
+                // register now
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      "Already have an account? ",
+                      style: TextStyle(
+                        fontSize: 14,
+                        color: Theme.of(context)
+                            .colorScheme
+                            .inversePrimary
+                            .withOpacity(0.5),
+                      ),
+                    ),
+                    GestureDetector(
+                      onTap: togglePage,
+                      child: Text(
+                        "Login now!",
+                        style: TextStyle(
+                          fontSize: 14,
+                          color: Theme.of(context).colorScheme.primary,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
               ],
             ),
-          ],
+          ),
         ),
       ),
     );
