@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ipp_messaging_app/auth/auth_service.dart';
+import 'package:ipp_messaging_app/services/auth/auth_service.dart';
 import 'package:ipp_messaging_app/pages/settings_page.dart';
 
 class MyDrawer extends StatelessWidget {

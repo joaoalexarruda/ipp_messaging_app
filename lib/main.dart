@@ -1,6 +1,6 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:ipp_messaging_app/auth/auth_gate.dart';
+import 'package:ipp_messaging_app/services/auth/auth_gate.dart';
 import 'package:ipp_messaging_app/firebase_options.dart';
 import 'package:ipp_messaging_app/themes/light_mode.dart';
 
