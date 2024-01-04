@@ -21,6 +21,9 @@ class MyDrawer extends StatelessWidget {
           Column(
             children: [
               DrawerHeader(
+                decoration: BoxDecoration(
+                  color: Theme.of(context).colorScheme.primary.withOpacity(0.1),
+                ),
                 child: Center(
                   child: Icon(Icons.message,
                       size: 45, color: Theme.of(context).colorScheme.primary),
