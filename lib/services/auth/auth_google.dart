@@ -19,6 +19,7 @@ class AuthGoogle {
     );
 
     String? email = googleUser.email;
+    String? id = googleUser.id;
 
     Future<void> createUserDocument(UserCredential? userCredential) async {
       if (userCredential != null && userCredential.user != null) {
@@ -27,6 +28,7 @@ class AuthGoogle {
             .doc(userCredential.user!.email)
             .set({
           'email': email,
+          'uid': id,
         });
       }
     }
