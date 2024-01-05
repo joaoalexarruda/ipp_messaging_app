@@ -27,6 +27,7 @@ class LoginPage extends StatelessWidget {
         _passwordController.text,
       );
     } catch (e) {
+      // ignore: use_build_context_synchronously
       showDialog(
           context: context,
           builder: (context) => AlertDialog(
@@ -71,10 +72,7 @@ class LoginPage extends StatelessWidget {
                   style: TextStyle(
                     fontSize: 14,
                     fontWeight: FontWeight.bold,
-                    color: Theme.of(context)
-                        .colorScheme
-                        .inversePrimary
-                        .withOpacity(0.5),
+                    color: Theme.of(context).colorScheme.primary.withOpacity(1),
                   ),
                 ),
 
@@ -120,7 +118,7 @@ class LoginPage extends StatelessWidget {
                           style: TextStyle(
                             fontSize: 12,
                             fontWeight: FontWeight.bold,
-                            color: Theme.of(context).colorScheme.primary,
+                            color: Theme.of(context).colorScheme.tertiary,
                           ),
                         ),
                       ),

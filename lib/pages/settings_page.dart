@@ -7,6 +7,9 @@ class SettingsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        iconTheme: IconThemeData(
+          color: Theme.of(context).colorScheme.secondary.withOpacity(1),
+        ),
         backgroundColor: Theme.of(context).colorScheme.primary.withOpacity(1),
         title: Text(
           'Settings',

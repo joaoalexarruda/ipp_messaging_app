@@ -2,7 +2,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:ipp_messaging_app/services/auth/auth_gate.dart';
 import 'package:ipp_messaging_app/firebase_options.dart';
-import 'package:ipp_messaging_app/themes/light_mode.dart';
+import 'package:ipp_messaging_app/themes/dark_mode.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: const AuthGate(),
-      theme: lightMode,
+      theme: darkMode,
     );
   }
 }

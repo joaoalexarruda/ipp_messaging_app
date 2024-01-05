@@ -16,12 +16,15 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.primary.withOpacity(1),
+        iconTheme: IconThemeData(
+          color: Theme.of(context).colorScheme.secondary,
+        ),
+        backgroundColor: Theme.of(context).colorScheme.primary,
         title: Text(
           'IPP Messaging App',
           style: TextStyle(
             fontWeight: FontWeight.bold,
-            color: Theme.of(context).colorScheme.secondary.withOpacity(1),
+            color: Theme.of(context).colorScheme.secondary,
           ),
         ),
         centerTitle: true,
@@ -82,6 +85,7 @@ class HomePage extends StatelessWidget {
             MaterialPageRoute(
               builder: (context) => ChatPage(
                 receiverEmail: userData["email"],
+                receiverID: userData["uid"],
               ),
             ),
           );
