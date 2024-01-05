@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import "package:ipp_messaging_app/services/auth/auth_google.dart";
 import 'package:ipp_messaging_app/services/auth/auth_service.dart';
 import "package:ipp_messaging_app/components/my_button.dart";
 import "package:ipp_messaging_app/components/my_textfield.dart";
@@ -221,7 +222,7 @@ class RegisterPage extends StatelessWidget {
 
                 SizedBox(
                   child: SquareTile(
-                    onTap: () {},
+                    onTap: () => AuthGoogle().signInWithGoogle(),
                     imagePath: 'assets/images/google_logo.png',
                   ),
                 ),
