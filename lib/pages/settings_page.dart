@@ -10,7 +10,8 @@ class SettingsPage extends StatelessWidget {
         iconTheme: IconThemeData(
           color: Theme.of(context).colorScheme.secondary.withOpacity(1),
         ),
-        backgroundColor: Theme.of(context).colorScheme.primary.withOpacity(1),
+        backgroundColor:
+            Theme.of(context).colorScheme.tertiary.withOpacity(0.5),
         title: Text(
           'Settings',
           style: TextStyle(

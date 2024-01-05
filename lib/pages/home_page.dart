@@ -19,7 +19,8 @@ class HomePage extends StatelessWidget {
         iconTheme: IconThemeData(
           color: Theme.of(context).colorScheme.secondary,
         ),
-        backgroundColor: Theme.of(context).colorScheme.primary,
+        backgroundColor:
+            Theme.of(context).colorScheme.tertiary.withOpacity(0.5),
         title: Text(
           'IPP Messaging App',
           style: TextStyle(

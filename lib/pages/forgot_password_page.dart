@@ -38,13 +38,13 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
       context: context,
       builder: (context) {
         return AlertDialog(
-          backgroundColor: Theme.of(context).colorScheme.background,
+          backgroundColor: Theme.of(context).colorScheme.tertiary,
           title: Center(
             child: Text(
               message,
               style: TextStyle(
-                color: Theme.of(context).colorScheme.primary,
-              ),
+                  color: Theme.of(context).colorScheme.primary,
+                  fontWeight: FontWeight.bold),
             ),
           ),
         );
@@ -57,6 +57,9 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.background,
       appBar: AppBar(
+        iconTheme: IconThemeData(
+          color: Theme.of(context).colorScheme.secondary.withOpacity(1),
+        ),
         toolbarHeight: 50,
         backgroundColor: Theme.of(context).colorScheme.background,
       ),
@@ -81,8 +84,14 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
                     const SizedBox(
                       width: 10,
                     ),
-                    Icon(Icons.message,
-                        size: 50, color: Theme.of(context).colorScheme.primary),
+                    Icon(
+                      Icons.message,
+                      size: 50,
+                      color: Theme.of(context)
+                          .colorScheme
+                          .inversePrimary
+                          .withOpacity(1),
+                    ),
                   ],
                 ),
 
@@ -98,7 +107,7 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
                     color: Theme.of(context)
                         .colorScheme
                         .inversePrimary
-                        .withOpacity(0.4),
+                        .withOpacity(0.5),
                   ),
                 ),
 

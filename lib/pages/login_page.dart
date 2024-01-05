@@ -29,10 +29,17 @@ class LoginPage extends StatelessWidget {
     } catch (e) {
       // ignore: use_build_context_synchronously
       showDialog(
-          context: context,
-          builder: (context) => AlertDialog(
-                title: Text(e.toString()),
-              ));
+        context: context,
+        builder: (context) => AlertDialog(
+          backgroundColor: Theme.of(context).colorScheme.tertiary,
+          title: Text(
+            e.toString(),
+            style: TextStyle(
+                color: Theme.of(context).colorScheme.primary,
+                fontWeight: FontWeight.bold),
+          ),
+        ),
+      );
     }
   }
 
@@ -58,7 +65,11 @@ class LoginPage extends StatelessWidget {
                       width: 10,
                     ),
                     Icon(Icons.message,
-                        size: 50, color: Theme.of(context).colorScheme.primary),
+                        size: 50,
+                        color: Theme.of(context)
+                            .colorScheme
+                            .inversePrimary
+                            .withOpacity(1)),
                   ],
                 ),
 
@@ -72,7 +83,10 @@ class LoginPage extends StatelessWidget {
                   style: TextStyle(
                     fontSize: 14,
                     fontWeight: FontWeight.bold,
-                    color: Theme.of(context).colorScheme.primary.withOpacity(1),
+                    color: Theme.of(context)
+                        .colorScheme
+                        .inversePrimary
+                        .withOpacity(0.5),
                   ),
                 ),
 
@@ -118,7 +132,7 @@ class LoginPage extends StatelessWidget {
                           style: TextStyle(
                             fontSize: 12,
                             fontWeight: FontWeight.bold,
-                            color: Theme.of(context).colorScheme.tertiary,
+                            color: Theme.of(context).colorScheme.primary,
                           ),
                         ),
                       ),
@@ -137,7 +151,7 @@ class LoginPage extends StatelessWidget {
                 ),
 
                 const SizedBox(
-                  height: 10,
+                  height: 15,
                 ),
 
                 // Or continue with
@@ -178,7 +192,7 @@ class LoginPage extends StatelessWidget {
                 ),
 
                 const SizedBox(
-                  height: 10,
+                  height: 15,
                 ),
 
                 // google button
@@ -191,7 +205,7 @@ class LoginPage extends StatelessWidget {
                 ),
 
                 const SizedBox(
-                  height: 10,
+                  height: 15,
                 ),
 
                 // register now

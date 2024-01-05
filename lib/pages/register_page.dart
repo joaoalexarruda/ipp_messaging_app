@@ -59,7 +59,7 @@ class RegisterPage extends StatelessWidget {
       showDialog(
         context: context,
         builder: (context) => AlertDialog(
-          backgroundColor: Theme.of(context).colorScheme.secondary,
+          backgroundColor: Theme.of(context).colorScheme.tertiary,
           title: Center(
             child: Text(
               "Passwords do not match or fields are empty.",
@@ -94,8 +94,14 @@ class RegisterPage extends StatelessWidget {
                     const SizedBox(
                       width: 10,
                     ),
-                    Icon(Icons.message,
-                        size: 50, color: Theme.of(context).colorScheme.primary),
+                    Icon(
+                      Icons.message,
+                      size: 50,
+                      color: Theme.of(context)
+                          .colorScheme
+                          .inversePrimary
+                          .withOpacity(1),
+                    ),
                   ],
                 ),
 
@@ -167,7 +173,7 @@ class RegisterPage extends StatelessWidget {
                 ),
 
                 const SizedBox(
-                  height: 10,
+                  height: 15,
                 ),
 
                 // Or continue with
@@ -208,7 +214,7 @@ class RegisterPage extends StatelessWidget {
                 ),
 
                 const SizedBox(
-                  height: 10,
+                  height: 15,
                 ),
 
                 // google button
@@ -221,7 +227,7 @@ class RegisterPage extends StatelessWidget {
                 ),
 
                 const SizedBox(
-                  height: 10,
+                  height: 15,
                 ),
 
                 // register now

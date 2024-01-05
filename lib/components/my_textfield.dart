@@ -4,7 +4,8 @@ class MyTextField extends StatelessWidget {
   final String hintText;
   final TextEditingController controller;
 
-  const MyTextField({super.key, required this.hintText, required this.controller});
+  const MyTextField(
+      {super.key, required this.hintText, required this.controller});
 
   @override
   Widget build(BuildContext context) {
@@ -18,16 +19,16 @@ class MyTextField extends StatelessWidget {
         decoration: InputDecoration(
           enabledBorder: OutlineInputBorder(
             borderSide: BorderSide(
-              color:
-                  Theme.of(context).colorScheme.inversePrimary.withOpacity(0.2),
+              color: Theme.of(context).colorScheme.tertiary.withOpacity(0.7),
             ),
           ),
           focusedBorder: OutlineInputBorder(
             borderSide: BorderSide(
-              color: Theme.of(context).colorScheme.primary.withOpacity(0.7),
+              color:
+                  Theme.of(context).colorScheme.inversePrimary.withOpacity(1),
             ),
           ),
-          fillColor: Theme.of(context).colorScheme.secondary,
+          fillColor: Theme.of(context).colorScheme.secondary.withOpacity(0.3),
           filled: true,
           hintText: hintText,
           hintStyle: TextStyle(
