@@ -1,3 +1,7 @@
+/*
+  Essa página é responsável por mostrar a conversa entre dois usuários.
+*/
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:ipp_messaging_app/components/chat_bubble.dart';
@@ -22,12 +26,11 @@ class _ChatPageState extends State<ChatPage> {
   // text controller
   final TextEditingController _messageController = TextEditingController();
 
-  // chat and auth
+  // chat and auth services
   final ChatService _chatService = ChatService();
-
   final AuthService _authService = AuthService();
 
-  // focus
+  // keyboard focus
   FocusNode myFocusNode = FocusNode();
 
   @override

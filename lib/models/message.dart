@@ -1,3 +1,8 @@
+/*
+  Essa class determina o modelo de mensagem 
+  que será salvo no Firestore.
+*/
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 class Message {

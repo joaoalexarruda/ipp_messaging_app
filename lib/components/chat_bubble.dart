@@ -1,3 +1,7 @@
+/*   
+  Este componente é resposável por criar o balão de conversa
+*/
+
 import 'package:flutter/material.dart';
 
 class ChatBubble extends StatelessWidget {

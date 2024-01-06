@@ -1,3 +1,8 @@
+/* 
+  Esse widget é responsável por criar uma tile com o email dos usuários
+  na home page 
+*/
+
 import 'package:flutter/material.dart';
 
 class UserTile extends StatelessWidget {

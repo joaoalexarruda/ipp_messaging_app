@@ -1,3 +1,7 @@
+/*
+  Página inicial do aplicativo, onde é mostrado a lista de usuários
+*/
+
 import 'package:flutter/material.dart';
 import 'package:ipp_messaging_app/components/my_drawer.dart';
 import 'package:ipp_messaging_app/components/user_tile.dart';

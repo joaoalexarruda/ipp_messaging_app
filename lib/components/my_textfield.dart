@@ -1,3 +1,7 @@
+/*
+  Este widget é resposável por criar um campo de texto padronizado
+*/
+
 import 'package:flutter/material.dart';
 
 class MyTextField extends StatelessWidget {

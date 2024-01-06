@@ -1,3 +1,8 @@
+/*
+  Esse arquivo contém o serviço de chat que é responsável por
+  enviar e receber mensagens entre os usuários, utilizando o Firestore.
+*/
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:ipp_messaging_app/models/message.dart';

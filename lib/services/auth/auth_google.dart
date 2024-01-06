@@ -1,3 +1,9 @@
+/*
+  Este arquivo contém a classe AuthGoogle que é responsável por 
+  realizar a autenticação do usuário utilizando o Google.
+  Também armazena dados no banco de dados Firestore.
+*/
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';

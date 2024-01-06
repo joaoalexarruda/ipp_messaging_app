@@ -1,3 +1,11 @@
+/*
+  Esse widget é usado para exibir a gaveta na página inicial.
+  Ela contém as tiles de logotipo, página inicial, configurações e lista de logout.
+  O home list tile é usado para navegar até a página inicial.
+  O settings list tile é usado para navegar até a página de configurações.
+  O logout list tile é usado para fazer logout do aplicativo.
+*/
+
 import 'package:flutter/material.dart';
 import 'package:ipp_messaging_app/services/auth/auth_service.dart';
 import 'package:ipp_messaging_app/pages/settings_page.dart';

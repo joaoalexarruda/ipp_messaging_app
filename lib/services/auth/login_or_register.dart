@@ -1,3 +1,7 @@
+/*
+  Responsável por exibir a página de login ou de registro.
+*/
+
 import 'package:flutter/material.dart';
 import 'package:ipp_messaging_app/pages/login_page.dart';
 import 'package:ipp_messaging_app/pages/register_page.dart';

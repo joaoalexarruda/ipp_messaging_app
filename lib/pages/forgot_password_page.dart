@@ -1,5 +1,6 @@
-// Página de recuperação de senha
-
+/* 
+  Página de recuperação de senha
+*/
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:ipp_messaging_app/components/my_button.dart';

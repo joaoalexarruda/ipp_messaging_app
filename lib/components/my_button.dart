@@ -1,3 +1,7 @@
+/*
+  Este componente é resposável por criar um botão padronizado
+ */
+
 import 'package:flutter/material.dart';
 
 class MyButton extends StatelessWidget {

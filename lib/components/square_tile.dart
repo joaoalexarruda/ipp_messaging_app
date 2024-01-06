@@ -1,5 +1,8 @@
-// Este componente é responsável por criar um quadrado com uma imagem
-// É onde foi feito o botão de login com o Google, e outros botões podem ser adicionados
+/* 
+  Este widget é responsável por criar um quadrado com uma imagem
+  É onde foi feito o botão de login com o Google
+  Outros botões podem ser adicionados 
+*/
 
 import 'package:flutter/material.dart';
 
