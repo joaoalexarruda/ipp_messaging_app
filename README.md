@@ -14,10 +14,20 @@ The color palette used in this application can be found [here](https://coolors.c
 
 ## Screenshots
 
-![login-page](project_screenshots/login-page.png)
-![register-page](project_screenshots/register-page.png)
-![list-of-users](project_screenshots/list-of-users.png)
-![chat](project_screenshots/chat.png)
-![drawer-menu](project_screenshots/drawer-menu.png)
-![settings-page](project_screenshots/settings-page.png)
-![verify-email](project_screenshots/verify-email.png)
+<table>
+  <tr>
+    <td><img src="project_screenshots/login-page.png" alt="login-page" width="300"/></td>
+    <td><img src="project_screenshots/register-page.png" alt="register-page" width="300"/></td>
+  </tr>
+  <tr>
+    <td><img src="project_screenshots/list-of-users.png" alt="list-of-users" width="300"/></td>
+    <td><img src="project_screenshots/chat.png" alt="chat" width="300"/></td>
+  </tr>
+  <tr>
+    <td><img src="project_screenshots/drawer-menu.png" alt="drawer-menu" width="300"/></td>
+    <td><img src="project_screenshots/settings-page.png" alt="settings-page" width="300"/></td>
+  </tr>
+  <tr>
+    <td><img src="project_screenshots/verify-email.png" alt="verify-email" width="300"/></td>
+  </tr>
+</table>
