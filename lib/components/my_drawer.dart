@@ -33,8 +33,19 @@ class MyDrawer extends StatelessWidget {
                   color: Theme.of(context).colorScheme.primary.withOpacity(0.1),
                 ),
                 child: Center(
-                  child: Icon(Icons.message,
-                      size: 45, color: Theme.of(context).colorScheme.primary),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      const Image(
+                        image: AssetImage("assets/images/ipp_logo.png"),
+                        height: 40,
+                      ),
+                      const SizedBox(width: 12),
+                      Icon(Icons.message,
+                          size: 45,
+                          color: Theme.of(context).colorScheme.primary),
+                    ],
+                  ),
                 ),
               ),
 

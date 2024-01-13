@@ -3,6 +3,7 @@
 */
 
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:ipp_messaging_app/components/chat_bubble.dart';
 import 'package:ipp_messaging_app/services/auth/auth_service.dart';
@@ -23,6 +24,14 @@ class ChatPage extends StatefulWidget {
 }
 
 class _ChatPageState extends State<ChatPage> {
+  void setupPushNotifications() async {
+    final fcm = FirebaseMessaging.instance;
+
+    await fcm.requestPermission();
+
+    fcm.subscribeToTopic('chat');
+  }
+
   // text controller
   final TextEditingController _messageController = TextEditingController();
 
@@ -36,6 +45,8 @@ class _ChatPageState extends State<ChatPage> {
   @override
   void initState() {
     super.initState();
+
+    setupPushNotifications();
 
     // add listener to focus node
     myFocusNode.addListener(
